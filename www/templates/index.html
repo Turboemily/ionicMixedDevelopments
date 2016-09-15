@@ -1,0 +1,39 @@
+<ion-view view-title="首页">
+  <ion-content scroll="true" padding="true">
+    <div  class="home-slide">
+      <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000"
+                     delegate-handle="update">
+        <ion-slide>
+          <img src="https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/lbs/pic/item/9345d688d43f87940cc75d96da1b0ef41bd53a49.jpg">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/lbs/pic/item/dcc451da81cb39db02b84ce0d8160924ab18300f.jpg">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/lbs/pic/item/fcfaaf51f3deb48f04689664f81f3a292df57802.jpg">
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <div class="index">
+      <a href="#/menu/nearby/{{list.cat_id}}" ng-repeat="list in Categories"><span ng-bind="list.cat_name"></span></a>
+    </div>
+
+    <div class="list">
+      美食精选
+    </div>
+    <div class="index_content">
+      <div class="index_left">
+        <img src="http://timg.baidu.com/timg?lbstsm&ref=http%3a%2f%2fbj.nuomi.com&quality=100&size=8&sec=1472311085&di=b6b8a49bc805a6caf50ed8d58ff992f9&src=http://e.hiphotos.baidu.com/nuomi/pic/item/e4dde71190ef76c6f784f9459916fdfaaf51670d.jpg" alt="">
+      </div>
+      <div class="index_right">
+        <h4>{{shop.shop_name}}</h4>
+        <div>
+          <i class="icon ion-ios-location-outline"></i><span>{{shop.address}}</span>
+        </div>
+        <p>人均:114REM</p>
+        <span>营业时间:{{shop.open_time}}</span><a  class="icon ion-ios-telephone"></a>
+      </div>
+
+    </div>
+    </ion-content>
+</ion-view>

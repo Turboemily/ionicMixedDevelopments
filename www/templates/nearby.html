@@ -1,0 +1,32 @@
+<ion-view view-title="附近服务">
+  <ion-content>
+    <div class="nearContent">
+      <div class="nearContentLeft">
+        <span><a href="#">杭州</a></span>
+        <a href="#"><i class="icon ion-chevron-down"></i></a>
+      </div>
+      <form action="get" onsubmit="return false;">
+        <label class="item item-input">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+          <!--ng-change实时检测输入框中变化   ng-model绑定到nearbyController中 -->
+        <input type="text" ng-model="input.search" ng-change="myFunc()" placeholder="搜索">
+        </label>
+      </form>
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="getSearch in h" class="item-avatar">
+        <img src="{{getSearch.image}}" alt="">
+        <h2 ng-bind="getSearch.title"></h2>
+        <p ng-bind="getSearch.description"></p>
+      </ion-item>
+    </ion-list>
+
+    <!--<ion-list>-->
+      <!--<ion-item ng-repeat="list in Categories" href="#/menu/nearby/{{list.cat_id}}">-->
+        <!--&lt;!&ndash;<h2 ng-bind="list.cat_id"></h2>&ndash;&gt;-->
+        <!--<h2 ng-bind="list.cat_name"></h2>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  </ion-content>
+</ion-view>
